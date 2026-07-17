@@ -1,0 +1,96 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    background-color: black;
+    height: 650px;
+    width: 650px;
+    color: white;
+    padding: 1% 0 0 4%;
+    box-sizing: border-box;
+    position: relative;
+}
+p{
+    margin: 0;
+}
+.three-btns{
+    border-radius: 50%;
+    background-color: black;
+    border: 0.2rem solid white;
+    padding: 3%;
+    width: 25%;
+    height: 25%;
+    margin: 4% 0% 4% 3%;
+    cursor: pointer;
+}
+.images{
+    width: 80%;
+}
+.rps-heading{
+    font:bold 3.2rem Arial;
+}
+.result-para{
+    font: bold 2rem Arial;
+    margin: 4% 0;
+}
+.moves-para{
+    font: 1.5rem Arial;
+}
+.score-para{
+    font: 2rem Arial;
+}
+.reset-btn{
+    background-color: black;
+    color: white;
+    border: 0.01rem dotted white;
+    padding: 1% 2%;
+    margin: 5% 2% 0 0;
+    font: 1rem Arial;
+    cursor: pointer;
+}
+.small-img{
+    width: 9%;
+}
+.welcome{
+    margin: 0 0 1% 25%;
+    font: 0.8rem Arial;
+}
+.yes-btn, .no-btn{
+    padding: 1.5% 3%;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.yes-btn{
+    margin: 0 2% 0 5%;
+    background-color: green;
+}
+.no-btn{
+    background-color: red;
+}
+.reset-para{
+    border: 0.05rem dotted white;
+    margin: 2% 0 0 6%;
+    padding: 2% 3%;
+    font: 1rem Arial;
+    width: 75%;
+}
+.note{
+    font: 0.7rem Arial;
+    position: absolute;
+    bottom: 1%;
+    left: 28%;
+}
+/*@media(min-width:500px) and (max-width:600px) {
+    main{
+        height: 500px;
+        width: 500px;
+    }
+}
