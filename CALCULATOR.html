@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        nav{
+            width: 275px;
+            background-color: black;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        button{
+            padding: 10px;
+            margin: 5px;
+            color: white;
+            background-color: rgb(74, 72, 72);
+            width: 55px;
+            height: 55px;
+            border-radius: 30px;
+            border: none;
+            font: 15px Arial;
+            cursor: pointer;
+        }
+        .yellow{
+            background-color: orange;
+        }
+        .silver{
+            background-color: gray;
+        }
+        .result-div{
+            height: 30px;
+            border: 0.5px solid rgb(60, 60, 60);
+            color: white;
+            font: bold 25px Arial;
+            padding: 10px;
+            margin: 5px 0px 15px 0px;
+        }
+        .bold{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="result-div"></div>
+        <div class="rows">
+            <button onclick="allClear()" class="silver">AC</button>
+            <button onclick="del()" class="silver">DEL</button>
+            <button onclick="adding('%')" class="silver">%</button>
+            <button onclick="adding('/')" class="yellow">/</button>
+        </div>
+        <div class="rows">
+            <button onclick="adding('7')">7</button>
+            <button onclick="adding('8')">8</button>
+            <button onclick="adding('9')">9</button>
+            <button onclick="adding('*')" class="yellow">X</button>
+        </div>
+        <div class="rows">
+            <button onclick="adding('4')">4</button>
+            <button onclick="adding('5')">5</button>
+            <button onclick="adding('6')">6</button>
+            <button onclick="adding('-')" class="yellow bold">-</button>
+        </div>
+        <div class="rows">
+            <button onclick="adding('1')">1</button>
+            <button onclick="adding('2')">2</button>
+            <button onclick="adding('3')">3</button>
+            <button onclick="adding('+')" class="yellow bold">+</button>
+        </div>
+        <div class="rows">
+            <button onclick="adding('**')">^</button>
+            <button onclick="adding('0')">0</button>
+            <button onclick="adding('.')" class="bold">.</button>
+            <button onclick="calculation()" class="yellow bold">=</button>
+        </div>
+    </nav>
+
+    <script>
+        let result = '';
+        function adding (param) {
+            /*if (param !== '+' || '-' || '*' || '/' || '%') {
+                result+= param
+                document.querySelector('.result-div').innerHTML = result;
+            }*/
+            result+= param
+            document.querySelector('.result-div').innerHTML = result;
+            
+        };
+
+        function calculation () {
+            const value = eval(result);
+            document.querySelector('.result-div').innerHTML = value;
+            result = String(value); 
+        };
+
+        function allClear () {
+            document.querySelector('.result-div').innerHTML = '';
+            result = '';
+        };
+
+        function del () {
+            result = result.slice(0,-1);
+            document.querySelector('.result-div').innerHTML = result;
+        };
+
+        //console.log(9**2);
+        
+    </script>
+</body>
+</html>
