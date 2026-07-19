@@ -2,9 +2,10 @@ practing feature
 
 this is my second commit
 
-this line is added directly from github website
+it is for testing of stash
 
-oops! learning fetch
+for commiting 
 
+addded another commit
 
-addded another commitaddded another commitaddded another commitaddded another commit
+addded another commit
